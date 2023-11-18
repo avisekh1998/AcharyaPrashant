@@ -1,0 +1,280 @@
+<div class="navAP">
+  <div class="mainNavAP">
+    <!-- First Section of NAV -->
+    <div class="nav-section-one">
+      <a class="main-iconAP" href="#">
+        <img src="https://acharyaprashant.org/images/ic_favicon.png" alt="" />
+      </a>
+
+      <div class="navChildAP">
+        <a> Home </a>
+      </div>
+
+      <div class="selectAP">
+        <div
+          class="dropdown-toggle dropdwnAP"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Live Sessions
+        </div>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Bhagvat Gita</a>
+          <a class="dropdown-item" href="#">Sant Sarita</a>
+          <a class="dropdown-item" href="#">Ashtavakra Geeta</a>
+          <a class="dropdown-item" href="#">Bodh Pratyusa</a>
+        </div>
+      </div>
+
+      <div class="navChildAP">
+        <a>Video Series</a>
+      </div>
+
+      <div class="navChildAP">
+        <a>AP Books</a>
+      </div>
+
+      <div class="navChildAP">
+        <a>AP Articles</a>
+      </div>
+
+      <div class="selectAP">
+        <div
+          class="dropdown-toggle dropdwnAP"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Invite
+        </div>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">For a Talk</a>
+          <a class="dropdown-item" href="#">For an Interview</a>
+        </div>
+      </div>
+
+      <div class="navChildAP">
+        <a>In Media</a>
+      </div>
+
+      <div class="navChildAP">
+        <a>Donate</a>
+      </div>
+    </div>
+
+    <!-- Second Section of NAV -->
+    <div class="nav-section-two">
+      <button class="toggleBtnAP responsiveElems" type="button">Donate</button>
+      <div class="buttonToggle">
+        <button
+          class="dropdown-toggle toggleBtnAP"
+          type="button"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          {{ language }}
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" (click)="getLanguage('english')">English</a>
+          <a class="dropdown-item" (click)="getLanguage('hindi')">Hindi</a>
+        </div>
+      </div>
+
+      <div class="navChildAP">
+        <a><i class="fa-solid fa-phone"></i></a>
+      </div>
+
+      <div class="navChildAP" (click)="toggleNavBar()">
+        <a><i class="fa-solid fa-bars"></i> Menu</a>
+      </div>
+
+      <div class="responsiveElems" (click)="toggleResponsiveNavBar()">
+        <a><i class="fa-solid fa-bars"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="navAPSecond">
+  <div class="navAPSecondDiv">
+    <div class="circle"></div>
+    <p>Get access to all 350+ video series at once!</p>
+    <button class="outlineButtonBasic">Click Here</button>
+  </div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- SIDE NAVBAR -->
+<div class="sideNavBar initialNavbarPosition">
+  <div class="sideNavbarToggle" (click)="toggleNavBar()">
+    <div class="crossIcon">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+  </div>
+  <div class="sideNavBody">
+    <div class="profileDiv">
+      <div class="profileIcon">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <span>Login</span>
+    </div>
+    <hr class="horizontalRow" />
+    <div class="sideNavLinks">
+      <div class="linkTiles"><a href="">Bhagvat Gita</a></div>
+      <div class="linkTiles"><a href="">Sant Sarita</a></div>
+      <div class="linkTiles"><a href="">Ashtavakra Gita</a></div>
+      <div class="linkTiles"><a href="">Bodh Pratyusa</a></div>
+      <div class="linkTiles"><a href="">AP Books</a></div>
+      <div class="linkTiles"><a href="">AP Articles</a></div>
+      <div class="linkTiles"><a href="">Video Series</a></div>
+      <div class="linkTiles"><a href="">AP Circle</a></div>
+      <div class="linkTiles"><a href="">Invite For talk</a></div>
+      <div class="linkTiles"><a href="">Invite For an Interview</a></div>
+      <div class="linkTiles"><a href="">Media and Public Interaction</a></div>
+      <div class="linkTiles"><a href="">Contact Us</a></div>
+      <div class="linkTiles"><a href="">Donate Us</a></div>
+    </div>
+    <hr class="horizontalRow" />
+
+    <div class="sideNavLinks">
+      <div class="title">More</div>
+      <div class="linkTiles"><a href="">Prashant Advait Foundation</a></div>
+      <div class="linkTiles"><a href="">Ghar Ghar Upanishad</a></div>
+      <div class="linkTiles"><a href="">About Acharya Prashant</a></div>
+    </div>
+    <hr class="horizontalRow" />
+    <div class="sideNavLinks">
+      <div class="title">Explore Categories</div>
+      <div class="linkTiles"><a href="">Vedant - Upanishad</a></div>
+      <div class="linkTiles"><a href="">Vedant - Bhagavad Gita</a></div>
+      <div class="linkTiles"><a href="">Other Scriptures</a></div>
+      <div class="linkTiles"><a href="">Saints and Masters</a></div>
+      <div class="linkTiles"><a href="">Other Streams</a></div>
+      <div class="linkTiles"><a href="">About Acharya Prashant</a></div>
+      <div class="linkTiles"><a href="">Life Questions</a></div>
+      <div class="linkTiles"><a href="">Technical Support</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay2" (click)="toggleNavBar()"></div>
+<!-- ======================================================================= -->
+
+<div class="responsiveCtr">
+  <div class="responsiveNavDetails">
+    <div class="loginResponisve">
+      <button class="toggleBtnAP" type="button">Login</button>
+      <i class="fa-solid fa-xmark" (click)="toggleResponsiveNavBar()"></i>
+    </div>
+
+    <div class="firstPage">
+      <div class="loginResponsiveBody">
+        <div (click)="pageChange()">
+          <a href="">Live Sessions</a><i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div><a href="">AP Books</a></div>
+        <div><a href="">AP Articles</a></div>
+        <div><a href="">Video Series</a></div>
+        <div><a href="">AP Circle</a></div>
+        <div><a href="">Invite For Talk</a></div>
+        <div><a href="">Invite for an Interview</a></div>
+        <div><a href="">Contact Us</a></div>
+        <div>
+          <button>Donate</button>
+        </div>
+      </div>
+      <hr class="horizontalRow" />
+      <div class="loginResponsiveBody">
+        <div><a href="">About Acharya Prashant</a></div>
+        <div><a href="">Prashant Advait Foundation</a></div>
+        <div><a href="">In Media</a></div>
+
+        <div class="appContainer">
+          <a
+            href="https://play.google.com/store/apps/details?id=org.acharyaprashant.apbooks"
+            target="_blank"
+          >
+            <img
+              src="https://acharyaprashant.org/images/ic_googleplay.png"
+              alt=""
+          /></a>
+
+          <a
+            href="https://apps.apple.com/in/app/acharya-prashant/id1603611866"
+            target="_blank"
+            ><img
+              src="https://acharyaprashant.org/images/ic_appstore.png"
+              alt=""
+          /></a>
+        </div>
+      </div>
+
+      <div class="resposiveNavIcon">
+        <div>For English</div>
+        <div class="iconsContainer">
+          <a href="https://www.youtube.com/c/AcharyaPrashant" target="_blank">
+            <i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://twitter.com/Prashant_Advait" target="_blank">
+            <i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/AdvaitAcharyaPrashant"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/acharya_prashant_paf/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://en.wikipedia.org/wiki/Acharya_Prashant"
+            target="_blank"
+          >
+            <i class="fa-brands fa-wikipedia-w"></i>
+          </a>
+        </div>
+
+        <div>For Hindi</div>
+        <div class="iconsContainer">
+          <a href="https://www.youtube.com/c/AcharyaPrashant">
+            <i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://twitter.com/Prashant_Advait" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.threads.net/@acharya_prashant_ap"
+            target="_blank"
+          >
+            <i class="fa-brands fa-threads"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/AdvaitAcharyaPrashant"
+            target="_blank"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/acharya_prashant_paf/"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondPage hidden">
+      <div class="loginResponsiveBody">
+        <div (click)="pageChange()">
+          <a href=""><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <div><a href="">Bhagavad Gita</a></div>
+        <div><a href="">Sant Sarita</a></div>
+        <div><a href="">Ashtavakra Samhita</a></div>
+        <div><a href="">Bodh Pratyusa</a></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<!-- dropdown.component.html -->
+
+<div class="searchNavbarAP">
+  <div class="childOne">
+    <img src="https://acharyaprashant.org/images/ic_videoseries.png" alt="" />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="toggleTheDropDown()"
+        >
+          All <i class="fa-solid fa-caret-down"></i>
+        </button>
+      </div>
+      <input
+        class="inputSearch"
+        type="text"
+        class="form-control"
+        placeholder="Search for video series"
+        aria-label=""
+        aria-describedby="basic-addon1"
+      />
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="childTwo">
+    <button>Login</button>
+  </div>
+</div>
+<div class="mainDropdown">
+  <div class="dropDowndiv">
+    <div
+      *ngFor="let dropdown of optionsSelect; let i = index"
+      class="dropdownPopup"
+    >
+      <div
+        *ngFor="let subDropdown of dropdown; let j = index"
+        class="dropdownOptions"
+        (mouseover)="getChildPopup(subDropdown.hasChildren, i, j)"
+      >
+        <a href="" *ngIf="language == 'english'">{{
+          subDropdown.name.english
+        }}</a>
+        <a href="" *ngIf="language == 'hindi'">{{ subDropdown.name.hindi }}</a>
+        <i class="fa-solid fa-caret-right" *ngIf="subDropdown.hasChildren"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" (click)="toggleNavbar()"></div>

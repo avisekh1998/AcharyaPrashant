@@ -1,0 +1,27 @@
+<div class="faqMain">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <h5>FAQs</h5>
+        <p>
+          Can’t find the answer you’re looking for? Reach out to our
+          <a href="#">support</a>
+          team.
+        </p>
+      </div>
+
+      <div class="col-lg-9 col-md-9 col-sm-12">
+        <ul id="accordion">
+          <li
+            *ngFor="let faq of faqArray; let i = index"
+            (click)="toggleAccordion(i)"
+          >
+            <div class="accordion-header" [innerHTML]="faq.question"></div>
+            <div class="content content-close" [innerHTML]="faq.answer"></div>
+            <hr class="horizontalRow" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

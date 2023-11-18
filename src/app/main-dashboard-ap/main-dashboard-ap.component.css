@@ -1,0 +1,322 @@
+.container-dashboard {
+  width: 100%;
+  padding: 2rem 3rem;
+}
+.content {
+  line-height: 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: "Noto Sans Devanagari Lato";
+}
+.dashboardBody {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 38% 60%;
+  justify-content: space-between;
+}
+.dashboardBody img {
+  width: 100%;
+}
+.socialMediaDiv {
+  margin-top: 2rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.contentSocialMedia {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.contentSocialMedia span {
+  cursor: pointer;
+}
+
+.fa-facebook-f {
+  color: #4574aa;
+  font-size: 1.5rem;
+}
+.faceBook,
+.twitter,
+.whatsapp,
+.linkedIn {
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.faceBook:hover {
+  background-color: #4574aa;
+}
+.faceBook:hover .fa-facebook-f,
+.twitter:hover .fa-twitter {
+  color: #ffffff;
+}
+.fa-twitter {
+  color: #16bfef;
+  font-size: 1.5rem;
+}
+.twitter:hover {
+  background-color: #16bfef;
+}
+.whatsapp:hover {
+  background-color: #06ba27;
+}
+.whatsapp:hover .fa-whatsapp {
+  color: #ffffff;
+}
+.fa-whatsapp {
+  color: #06ba27;
+  font-size: 1.5rem;
+}
+.fa-linkedin-in {
+  color: #0a66c2;
+  font-size: 1.5rem;
+}
+.linkedIn:hover {
+  background-color: #0a66c2;
+}
+.linkedIn:hover .fa-linkedin-in {
+  color: #ffffff;
+}
+
+.coursesContainer {
+  width: 100%;
+  margin-top: 4rem;
+}
+.courseMainDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: space-between;
+}
+.courseCard {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.courseCard:hover {
+  background-color: #ebf4f7;
+}
+.card-headerCourses {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 0.4rem;
+}
+.card-headerCourses .tag {
+  background-color: #94a3b8;
+  color: #ffffff;
+  font-family: "Nato devanagiri Lato";
+  width: 15%;
+  font-weight: 400;
+  padding-left: 0.3rem;
+  position: relative;
+  font-size: small;
+  height: 1.3rem;
+}
+.tag::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  right: 0px;
+  margin-bottom: -8px;
+  border: 8px solid transparent;
+  border-right-color: #ffffff;
+  z-index: 99;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  letter-spacing: 0.5px;
+}
+.card-content .title {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Nato Devanagiri Lato";
+  color: #1e293b;
+}
+.card-content .subtitle {
+  font-size: 0.9rem;
+  font-family: "Nato Devanagiri Lato";
+  color: #475569;
+}
+
+.card-content .languageCard {
+  background-color: #c7e6f8;
+  color: #1e293b;
+  border-radius: 4px;
+  width: 12%;
+  text-transform: capitalize;
+  height: 1.4rem;
+  text-align: center;
+  font-size: small;
+  align-items: center;
+}
+.card-action {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 0.7rem;
+  align-items: center;
+  gap: 1rem;
+  color: #f6b85a;
+}
+.card-action .verticalLine {
+  height: 1rem;
+  width: 0.1rem;
+  background-color: #1e293b;
+}
+.card-action div {
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "lato";
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+.originalCost {
+  text-decoration: line-through;
+}
+.card-content .contribution {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 200;
+}
+.contribution span:nth-child(3) {
+  text-decoration: line-through;
+}
+.fa-indian-rupee-sign {
+  font-size: 0.8rem;
+  margin-left: 3px;
+}
+.relatedCoursesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+.relatedCoursesCard {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  /* height: 8rem; */
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.relatedCoursesContainer :hover {
+  background-color: #ebf4f7;
+}
+.relatedCoursesImage {
+  height: 100%;
+  width: 35%;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 0.3rem;
+}
+.relatedCoursesImage img {
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+}
+.relatedCoursesImage img:nth-child(1) {
+  width: 100%;
+  z-index: 3;
+  position: relative;
+}
+.relatedCoursesImage img:nth-child(2) {
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  z-index: 2;
+  border-radius: 5px;
+  width: 96%;
+}
+.relatedCoursesImage img:nth-child(3) {
+  position: absolute;
+  top: -9px;
+  left: 8px;
+  z-index: 1;
+  border-radius: 5px;
+  width: 92%;
+}
+.relatedCourseContent {
+  display: flex;
+  width: 55%;
+  align-items: baseline;
+  flex-direction: column;
+}
+.relatedCourseContent .title {
+  font-size: 1.1rem;
+  font-family: "Lato", "Noto Sans Devanagari";
+  font-weight: 400;
+}
+.relatedCourseContent .subtitle {
+  font-size: 0.9rem;
+  font-family: "Noto Sans Devanagari", "Lato";
+  opacity: 0.9;
+}
+.relatedCourseContent .count {
+  font-size: 0.9rem;
+  font-family: "Lato", "Noto Sans Devanagari";
+  opacity: 0.7;
+}
+.extraDetails {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+.extraDetails .languageCard {
+  background-color: #c7e6f8;
+  color: #1e293b;
+  border-radius: 4px;
+  width: 40%;
+  text-transform: capitalize;
+  height: 1.4rem;
+  text-align: center;
+  font-size: small;
+  align-items: center;
+}
+/* ================================================================================= */
+@media screen and (max-width: 769px) {
+  .relatedCoursesContainer {
+    grid-template-columns: 1fr;
+  }
+  .courseMainDiv {
+    grid-template-columns: 1fr;
+  }
+  .dashboardBody {
+    grid-template-columns: 1fr;
+  }
+  .dashboardBody div:nth-child(2) {
+    margin-top: 1rem;
+  }
+  .card-headerCourses .tag {
+    width: 11%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  .courseMainDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-headerCourses .tag {
+    width: 14%;
+  }
+}

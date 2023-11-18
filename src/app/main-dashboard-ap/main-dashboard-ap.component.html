@@ -1,0 +1,136 @@
+<div class="container-dashboard">
+  <h4>{{ dashBoardData[0]?.details?.title }}</h4>
+  <div class="dashboardBody">
+    <div>
+      <img [src]="dashBoardImg" alt="" />
+    </div>
+    <div>
+      <h5>{{ dashBoardData[0]?.details?.subtitle }}</h5>
+      <p class="content">{{ dashBoardData[0]?.details?.description }}</p>
+    </div>
+  </div>
+
+  <div class="socialMediaDiv">
+    <div class="titleSocialMedia">
+      <span>Share this series:</span>
+    </div>
+    <div class="contentSocialMedia">
+      <span class="faceBook">
+        <a
+          href="https://www.facebook.com/login.php?skip_api_login=1&api_key=671373654631248&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv17.0%2Fdialog%2Fshare%3Fchannel%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Dfb95175da71618%2526domain%253Dacharyaprashant.org%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Facharyaprashant.org%25252Ff21d9981950b864%2526relation%253Dopener%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df10198abf6a3b98%2526domain%253Dacharyaprashant.org%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Facharyaprashant.org%25252Ff21d9981950b864%2526relation%253Dopener%2526frame%253Df355f04482a4728%2526result%253D%252522xxRESULTTOKENxx%252522%26display%3Dpopup%26href%3Dhttps%253A%252F%252Facharyaprashant.org%252Fen%252Fcourses%252Fseries%252Fcourse-series-eeb9d3%26quote%26hashtag%3D%2523AcharyaPrashant%26client_id%3D671373654631248%26ret%3Dlogin%26sdk%3Djoey%26fallback_redirect_uri%3Dhttps%253A%252F%252Facharyaprashant.org%252Fen%252Fcourses%252Fseries%252Fcourse-series-eeb9d3&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df10198abf6a3b98%26domain%3Dacharyaprashant.org%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Facharyaprashant.org%252Ff21d9981950b864%26relation%3Dopener%26frame%3Df355f04482a4728%26result%3D%257B%2522error_code%2522%253A4201%252C%2522error_message%2522%253A%2522User%2Bcanceled%2Bthe%2BDialog%2Bflow%2522%257D%26error_code%3D4201%26error_message%3DUser%2Bcanceled%2Bthe%2BDialog%2Bflow%26e2e%3D%257B%257D&display=popup&locale=en_GB"
+          target="_blank"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </span>
+
+      <span class="twitter">
+        <a
+          href="https://twitter.com/i/flow/login?redirect_after_login=%2Fintent%2Ftweet%3Furl%3Dhttps%253A%252F%252Facharyaprashant.org%252Fen%252Fcourses%252Fseries%252Fcourse-series-eeb9d3%26text%3D%250A%26hashtags%3DAcharyaPrashant%2CVideoSeries%2Cwisdom%2Cspirituality"
+          target="_blank"
+        >
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </span>
+
+      <span class="whatsapp">
+        <a
+          href="https://api.whatsapp.com/send/?text=%0Ahttps%3A%2F%2Facharyaprashant.org%2Fen%2Fcourses%2Fseries%2Fcourse-series-eeb9d3&type=custom_url&app_absent=0"
+          target="_blank"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </span>
+
+      <span class="linkedIn">
+        <a
+          href="https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2FshareArticle%2F%3Furl%3Dhttps%3A%2F%2Facharyaprashant%2Eorg%2Fen%2Fcourses%2Fseries%2Fcourse-series-eeb9d3&trk=login_reg_redirect"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <!-- ================================================================================== -->
+
+  <div class="coursesContainer">
+    <div class="course-header">
+      <h4>Video Series ( {{ dashBoardData[0]?.courses?.length }} )</h4>
+      <hr />
+    </div>
+
+    <!-- ============================================================== -->
+    <div class="courseMainDiv">
+      <div class="courseCard" *ngFor="let card of dashBoardData[0]?.courses">
+        <div class="card-headerCourses">
+          <div class="tag">
+            Part
+            {{ card.series.order.seq }}
+          </div>
+          <!-- <div class="tagTilt"></div> -->
+        </div>
+        <div class="card-content">
+          <div class="title">{{ card.title }}</div>
+          <div class="subtitle">{{ card.subtitle }}</div>
+          <div>{{ getCourseHours(card.courseHours) }}</div>
+          <div class="contribution">
+            <span> Contribution: </span>
+            <span
+              ><i class="fa-solid fa-indian-rupee-sign"></i>{{ card.amount }}
+            </span>
+            <span
+              ><i class="fa-solid fa-indian-rupee-sign"></i
+              >{{ card.originalAmount }}</span
+            >
+          </div>
+          <div class="languageCard">{{ card.language }}</div>
+        </div>
+        <div class="card-action">
+          <div>ADD TO CART</div>
+          <div class="verticalLine"></div>
+          <div>ENROLL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <div class="relatedCoursesContainer">
+    <div
+      class="relatedCoursesCard"
+      *ngFor="let relatedContent of dashBoardData[0]?.relatedContent"
+    >
+      <div class="relatedCoursesImage">
+        <img [src]="getImgSrc(relatedContent)" alt="" />
+        <img [src]="getImgSrc(relatedContent)" alt="" />
+        <img [src]="getImgSrc(relatedContent)" alt="" />
+      </div>
+
+      <div class="relatedCourseContent">
+        <div class="title">{{ relatedContent.title }}</div>
+        <div class="subtitle">{{ relatedContent.subtitle }}</div>
+        <div class="count" *ngIf="relatedContent.coursesCount">
+          {{ relatedContent.coursesCount }} Video Series
+        </div>
+        <div class="extraDetails" *ngIf="!relatedContent.coursesCount">
+          <div>{{ getCourseHours(relatedContent.courseHours) }}</div>
+          <div class="contribution">
+            <span> Contribution: </span>
+            <span
+              ><i class="fa-solid fa-indian-rupee-sign"></i
+              >{{ relatedContent.amount }}
+            </span>
+          </div>
+          <div class="languageCard">{{ relatedContent.language }}</div>
+          <div class="card-action">
+            <div>ADD TO CART</div>
+            <div class="verticalLine"></div>
+            <div>ENROLL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

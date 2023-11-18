@@ -1,0 +1,50 @@
+.faqMain {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  background-color: rgb(251, 252, 253);
+}
+/* #accordion {
+  margin: 100px auto;
+  width: 600px;
+} */
+#accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+#accordion li .accordion-header {
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#accordion .content {
+  font-family: "lato", "Noto Sans Devanagari";
+  padding: 0 1rem;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: max-height 0.3s;
+
+  border: none;
+}
+.content-close {
+  max-height: 0;
+}
+.content-open {
+  max-height: 700px;
+}
+.hidden {
+  display: none;
+}
+.horizontalRow {
+  width: 100%;
+  background-color: rgb(71, 69, 69);
+  margin: 0.4rem 0;
+}
